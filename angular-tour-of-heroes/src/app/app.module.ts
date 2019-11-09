@@ -6,10 +6,15 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HousesComponent } from './houses/houses.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AngularFireModule.initializeApp(environment.firebase),
+ 	  AngularFirestoreModule,
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
